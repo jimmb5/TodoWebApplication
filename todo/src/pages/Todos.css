@@ -1,0 +1,146 @@
+.todos-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 1rem 0;
+	padding: 0 2rem;
+	box-sizing: border-box;
+	background-color: #000;
+	color: #fff;
+	z-index: 1;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.card {
+	min-height: 70vh;
+	width: 100%;
+	min-width: 320px;
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+	transition: box-shadow 0.2s;
+	z-index: 2;
+}
+
+.card h1 {
+	margin: 1.5rem 1.5rem 1rem;
+	font-size: 2rem;
+	font-weight: 700;
+	font-family: 'Inter', sans-serif;
+	color: #fff;
+}
+
+.card input {
+	margin: 0 1.5rem 1.5rem;
+	padding: 0.875rem 1.5rem;
+	border-radius: 2rem;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	background: rgba(255, 255, 255, 0.05);
+	color: #fff;
+	font-size: 1.125rem;
+	font-family: 'Inter', sans-serif;
+	width: calc(100% - 3rem);
+	box-sizing: border-box;
+	outline: none;
+	transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.card input::placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.card input:focus {
+	border-color: #5227FF;
+	background: rgba(82, 39, 255, 0.08);
+}
+
+.card ul {
+	list-style: none;
+	padding: 0 1.5rem 1.5rem;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	overflow-y: auto;
+	max-height: calc(70vh - 200px);
+}
+
+
+.card li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    background: #1a1a1a;
+    padding: 0.875rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.2s ease;
+}
+
+
+.add-task-button,
+.delete-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	background: #5227FF;
+	color: #fff;
+	border: none;
+	padding: 0.875rem 1.5rem;
+	border-radius: 2rem;
+	cursor: pointer;
+	transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.2s ease;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.delete-button {
+	background: #FF3232;
+}
+
+.delete-button:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.delete-button:active {
+	transform: translateY(0);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.delete-button:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+
+.delete-button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	transform: none;
+	box-shadow: none;
+}
+
+
+@media (max-width: 800px) {
+	.cards {
+		grid-template-columns: 1fr;
+	}
+	.card {
+		min-width: 0;
+	}
+}

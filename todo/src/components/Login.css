@@ -1,0 +1,102 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.login-container h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-container p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}   
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.login-container form input {
+    margin: 0.5rem 0;
+	padding: 0.875rem 1.5rem;
+	border-radius: 2rem;
+	border: 1px solid #5227FF;
+	background: transparent;
+    color:#FF94B4;
+	font-size: 1.125rem;
+	width: 100%;
+	box-sizing: border-box;
+	outline: none;
+	transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.login-container form input::placeholder {
+    color: #606060;
+    font-size: 1.125rem;
+}
+
+.login-container form input:focus {
+    border-color: #FF94B4;
+    background: rgba(82, 39, 255, 0.08);
+}
+
+.login-container form label {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    align-self: flex-start;
+}
+
+.login-container form button {
+    margin: 0.5rem 0;
+    padding: 0.875rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid #5227FF;
+    background: transparent;
+    color:#FF94B4;
+    font-size: 1.125rem;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    margin-top: 2rem;
+}
+
+.login-container form button:hover {
+    border-color: #FF94B4;
+    background: rgba(82, 39, 255, 0.08);
+}
+
+.login-container form button:active {
+    border-color: #5227FF;
+    background: transparent;
+}
+
+
+.login-container form input:-webkit-autofill,
+.login-container form input:-webkit-autofill:hover,
+.login-container form input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #FF94B4 !important;
+    caret-color: #FF94B4;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(82, 39, 255, 0.08) inset;
+    box-shadow: 0 0 0px 1000px rgba(82, 39, 255, 0.08) inset;
+    border-color: #FF94B4;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
